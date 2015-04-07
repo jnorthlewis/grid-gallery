@@ -70,15 +70,11 @@ $(function (){
 	//5. click on body to close modal
 		
 
-		// $('*:not(.modal)').on('click', function(){
-		// 	if ($('.modal').hasClass('open')) {
-		// 		$('.modal').removeClass('open');
-		// 		console.log('removed!');
-		// 	} else {
-		// 		$('.modal').addClass('open');
-		// 		console.log('still here');
-		// 	}
-		// });
+		$('.overlayBKG').on('click', function(){
+				$('.overlay').removeClass('open');
+				console.log('removed!');
+			
+		});
 
 });
 
