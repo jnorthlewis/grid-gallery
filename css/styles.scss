@@ -8,6 +8,12 @@
 body {
 	margin: 0;
 	padding: 0;
+	overflow-y: scroll;
+}
+
+.innerCrapper{
+	margin: 0 auto;
+	width: 70%;	
 }
 
 html {
@@ -47,7 +53,7 @@ a {
 
 .photoThumbnails a {
 	img {
-		width: 30%;
+		// width: 30%;
 		// flex: 1 0 30%;
 		height: auto;
 	}
@@ -67,6 +73,16 @@ a {
 	outline: 0;
 }
 
+.arrowLeftDiv a{
+	cursor: url("../i/leftArrow.png"), auto;
+	
+}
+
+.arrowRightDiv a{
+	cursor: url("../i/rightArrow.png"), auto;
+	
+}
+
 .arrowRightDiv{
 	top:0;
 	right:0;
@@ -76,6 +92,7 @@ a {
 .arrowLeftDiv{
 	top:0;
 	left:0;
+	
 }
 
 .overlay {
@@ -102,7 +119,8 @@ a {
 .modal {
 	background: white;
 	padding: 40px;
-	width: 60%;
+	// width: 60%;
+	height: auto;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -110,7 +128,27 @@ a {
 	// display: none;
 	z-index: 999;
 }
-
+.modalContent {
+	position: relative;
+	img {
+		position: relative;
+		z-index: 1;
+		top: 0;
+	}
+	.newImage {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+		opacity: 0;
+		transition: opacity 0.5s ease;
+	}
+	&.transition {
+		.newImage {
+			opacity: 1;
+		}
+	}
+}
 
 .hidden {
 	display:none;
@@ -119,9 +157,62 @@ a {
 .open {
 	display: block;
 }
-////////////// F O O T E R //////////////
+////////////// M A S O N R Y //////////////
 ////////////////////////////////////////
 
+#container {
+	float: left;
+  	width: 100%;
+  	margin:0 auto;
+  // padding-left: 20px;
+  // padding-right: 1%;
+  	margin-bottom: 100px;
+}
+
+/* items are not quite 1/3 wide */
+.item {
+  // width: 31.2%;
+  // 3 column
+  width: 23%;
+  // 4 column
+  // width: 100%;
+  float: left;
+  margin: 1%;
+
+}
+
+/* images cover up the gap */
+.item img {
+  display: block;
+  width: 100.5%;
+}
+
+/**** Transitions for Masonry ****/
+
+.masonry,
+.masonry .masonry-brick {
+  -webkit-transition-duration: 0.4s;
+     -moz-transition-duration: 0.4s;
+      -ms-transition-duration: 0.4s;
+       -o-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.masonry {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.masonry .masonry-brick {
+  -webkit-transition-property: left, right, top;
+     -moz-transition-property: left, right, top;
+      -ms-transition-property: left, right, top;
+       -o-transition-property: left, right, top;
+          transition-property: left, right, top;
+}
 
 
 // MEDIA QUERIES
