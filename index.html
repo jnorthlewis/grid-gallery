@@ -9,10 +9,30 @@
 	
 	<div class="innerCrapper">
 		
-		<div class="photoThumbnails">
-			<a href="" data-full="i/brunch.jpg" data-desc="Image Description Here" rel="gallery01" height="320px"><img src="i/brunch.jpg" alt=""></a>
-			<a href="" data-full="i/dunes.jpg" data-desc="Image Description Here" rel="gallery01" height="240px"><img src="i/dunes.jpg" alt=""></a>
-			<a href="" data-full="i/icecream.jpg" data-desc="Image Description Here" rel="gallery01" height="240px"><img src="i/icecream.jpg" alt=""></a>
+		<div class="photoThumbnails js-masonry" id="container">
+			<a href=""  class="item" data-full="i/brunch.jpg" data-desc="Image Description Here" rel="gallery01" height="320px"><img src="i/brunch.jpg" alt=""></a>
+
+			<a href=""  class="item" data-full="i/dunes.jpg" data-desc="Image Description Here" rel="gallery01" height="240px"><img src="i/dunes.jpg" alt=""></a>
+
+			<a href=""  class="item" data-full="i/icecream.jpg" data-desc="Image Description Here" rel="gallery01" height="240px"><img src="i/icecream.jpg" alt=""></a>
+
+			<a href=""  class="item" data-full="i/poncho.jpg" data-desc="Image Description Here" rel="gallery01" height="240px"><img src="i/poncho.jpg" alt=""></a>
+
+			<a href=""  class="item" data-full="i/brunch.jpg" data-desc="Image Description Here" rel="gallery01" height="320px"><img src="i/brunch.jpg" alt=""></a>
+
+			<a href=""  class="item" data-full="i/dunes.jpg" data-desc="Image Description Here" rel="gallery01" height="240px"><img src="i/dunes.jpg" alt=""></a>
+
+			<a href=""  class="item" data-full="i/icecream.jpg" data-desc="Image Description Here" rel="gallery01" height="240px"><img src="i/icecream.jpg" alt=""></a>
+
+			<a href=""  class="item" data-full="i/poncho.jpg" data-desc="Image Description Here" rel="gallery01" height="240px"><img src="i/poncho.jpg" alt=""></a>
+
+			<a href=""  class="item" data-full="i/brunch.jpg" data-desc="Image Description Here" rel="gallery01" height="320px"><img src="i/brunch.jpg" alt=""></a>
+
+			<a href=""  class="item" data-full="i/dunes.jpg" data-desc="Image Description Here" rel="gallery01" height="240px"><img src="i/dunes.jpg" alt=""></a>
+
+			<a href=""  class="item" data-full="i/icecream.jpg" data-desc="Image Description Here" rel="gallery01" height="240px"><img src="i/icecream.jpg" alt=""></a>
+			
+			<a href=""  class="item" data-full="i/poncho.jpg" data-desc="Image Description Here" rel="gallery01" height="240px"><img src="i/poncho.jpg" alt=""></a>
 		
 
 		</div> <!-- /.photoThumbnails -->
@@ -32,16 +52,32 @@
 				</div>
 				<!-- end. arrowLeftDiv -->
 				
-				<div class="modalContent">
-					<img src="" alt="">
+				<div class="modalContent clearfix">
+					<img src="" alt="" class="original">
 				</div> <!-- /.modalContent -->
 			
 			</div> <!-- /.modal -->
 		</div> <!-- /.overlay -->
 	</div> <!-- end innerCrapper -->
 
+<script src="masonry.pkgd.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="js/scripts.js"></script>
+
+
+<script>
+		var $container = $('#container');
+
+		$container.imagesLoaded( function() {
+		  $container.masonry({
+		    columnWidth: function( containerWidth ) {
+		      return containerWidth / 3
+		    }
+		  });
+		});
+
+
+</script>
 
 </body>
 </html>

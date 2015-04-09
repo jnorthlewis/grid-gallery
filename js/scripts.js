@@ -1,24 +1,23 @@
 $(function (){
 
-	var fullImg = $('.photoThumbnails a').data('full');
-	
+	// var fullImg = $('.photoThumbnails a').data('full');
+	//Get all links so we can loop through
+	var $galleryImages = $('.photoThumbnails a');
+
+	console.log($galleryImages);
 	//1. when user clicks on thumbnail show modal box
-	$('.photoThumbnails a').on('click', function(e){
+	$galleryImages.on('click', function(e){
 		e.preventDefault();
+		var index = $galleryImages.index($(this));
+		//Get full source
 		var src = $(this).data('full');
+		//Get full description
 		var decp = $(this).data('desc')
 
+
+		$('.modalContent img').attr('src',src).data('index',index);
+		
 		$('.overlay').addClass('open');
-
-		// $('.overlay').on('click', function(){
-		// 	$('.overlay').removeClass('open');
-		// });
-
-		// $(window).on('click', function(e){
-		// 	e.preventDefault();
-		// 	console.log("i lcicked the window");
-		// 	$('.modal').toggleClass('open');
-		// });
 
 		$('.selected').removeClass('selected');
 		$(this).addClass('selected');
@@ -26,26 +25,28 @@ $(function (){
 
 	//2. have modal box get full-size image
 		// the second src (without apostrophes) is the variable
-		$('.modalContent img').attr('src',src);
 		console.log('imagessssss');
 
 	});
-
-	// $('.overlay').on('click', function(){
-	// 	$('.overlay').removeClass('open');
-	// });
-
-	// $('*:not(.photoThumbnails a)').on('click', function(e){
-	// 	e.preventDefault();
-	// 	console.log("i lcicked the window");
-	// 	$('.modal').removeClass('open');
-	// });
-
 
 
 	//3. make directional arrows work
 		$('a.arrowRight').on('click', function(e){
 			e.preventDefault();
+			// var newIndex = $(this).parent().parent().find('img').data('index');
+			// newIndex += 1;
+			// console.log(newIndex);
+			// var newSrc = $galleryImages.eq(newIndex).data('full');
+			// console.log(newSrc);
+			// var img = $('<img>').attr('src',newSrc).addClass('newImage').data('index',newIndex);
+			// $('.modalContent').append(img);
+			// $('.modalContent').addClass('transition');
+			// $('.modalContent').on('transitionend', '.newImage', function() {
+			// 	$('.modalContent .original').attr('src',newSrc);
+			// 	$('.modalContent .newImage').remove();
+			// 	$('.modalContent').removeClass('transition');
+			// });
+
 			var $selected = $('.selected')
 			if ($selected.is(':first-child')) {
 				$('.photoThumbnails a:last-child').click();	
@@ -57,6 +58,13 @@ $(function (){
 
 		$('a.arrowLeft').on('click', function (e){
 			e.preventDefault();
+			// 	var newIndex = $(this).parent().parent().find('img').data('index');
+			// newIndex -= 1;
+			// console.log(newIndex);
+			// var newSrc = $galleryImages.eq(newIndex).data('full');
+			// console.log(newSrc);
+			// $('.modalContent').append('<img class="newImage" src="'+newSrc+'">');
+			// $('.modalContent').addClass('transition');
 			var $selected = $('.selected');
 			if ($selected.is(':last-child')) {
 				$('.photoThumbnails a:first-child').click();
@@ -79,11 +87,3 @@ $(function (){
 });
 
 
-// if there is not a class open, add it
-
-// if ($('.modal').has('.open')) {
-// 	$(this).removeClass('open');
-// } else {
-// 	$(this).addClass('open');
-// }
-// if there is a class of open, remove it
