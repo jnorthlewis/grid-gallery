@@ -4,7 +4,7 @@ $(function (){
 	//Get all links so we can loop through
 	var $galleryImages = $('.photoThumbnails a');
 
-	console.log($galleryImages);
+	// console.log($galleryImages);
 	//1. when user clicks on thumbnail show modal box
 	$galleryImages.on('click', function(e){
 		e.preventDefault();
@@ -25,8 +25,14 @@ $(function (){
 
 	//2. have modal box get full-size image
 		// the second src (without apostrophes) is the variable
-		console.log('imagessssss');
 
+		var $minHeight = 800;
+		var $height = $('.modal').height();
+		if ( $('.modal').$height > $minHeight) {
+			$(this).css("width", "40%");
+		}
+
+		console.log('imagessssss');
 	});
 
 
@@ -52,6 +58,7 @@ $(function (){
 				$('.photoThumbnails a:last-child').click();	
 			} else {
 				$selected.prev().trigger('click');
+				console.log('previous')
 			}
 		
 		});
