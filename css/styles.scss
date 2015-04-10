@@ -51,14 +51,16 @@ a {
 .sidebar {
 	width: 20%;
 	float: left;
-	padding: 50px;
+	padding: 50px 0;
 	position: fixed;
+	margin: 0 0 0 50px;
 }
 
 nav.main-nav {
 	h1 {
 		margin: 5px 0;
 		text-transform: uppercase;
+		font-weight: 600;
 		color: #222;
 	}
 	ul.nav-links {
@@ -141,10 +143,10 @@ nav.main-nav {
 	padding: 30px;
 	// width: 60%;
 	// height: auto;
-	//position: absolute;
-	position: fixed;
+	position: absolute;
+	// position: fixed;
 	box-shadow: 0 0 20px rgba(0,0,0,0.1);
-	width: 60%;
+	// width: 60%;
 	top: 50%;
 	// left: 50%;
 	left: 50%;
@@ -155,11 +157,15 @@ nav.main-nav {
 
 .modalContent {
 	position: relative;
-	// img {
-	// 	position: relative;
-	// 	z-index: 1;
-	// 	top: 0;
-	// }
+	img {
+		position: relative;
+		z-index: 1;
+		top: 0;
+		max-width: 700px;
+		max-height: 600px;
+		display: block;
+		margin: 0 auto;
+	}
 }	
 // 	.newImage {
 // 		position: absolute;
