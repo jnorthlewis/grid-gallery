@@ -1,0 +1,79 @@
+@media all and (max-width: 1000px) {
+	.modalContent img {
+		max-width: 640px;
+		max-height: 530px;
+	}
+} // END 1000px
+
+@media all and (max-width: 840px) {
+	.modalContent img {
+		max-width: 600px;
+	}
+
+	.innerCrapper {
+		padding: 50px 20px;
+		width: 100%;
+	}
+
+	.sidebar{
+		width:100%;
+	}
+
+    .item {
+  		width: 48%;
+  		float: left;
+  		margin: 1%;
+	}
+
+} // END 840px
+
+@media all and (max-width: 750px) {
+	.modalContent img {
+		max-width: 540px;
+	}
+} // END 750px
+
+@media all and (max-width: 666px) {
+	.modalContent img {
+		max-width: 430px;
+	}
+
+	#container{
+		height: auto !important;
+	}
+} // END 666px
+
+@media all and (max-width: 550px) {
+	.modalContent img {
+		max-width: 385px;
+	}
+} // END 550px
+
+@media all and (max-width: 460px) {
+	.modal {
+		padding: 15px;
+	}
+
+	.overlayBKG {
+		opacity: 0.3;
+	}
+}
+
+@media all and (max-width: 400px) {
+	    .item {
+	  		width: 100%;
+		}
+
+		.innerCrapper.item{
+			margin-bottom: 20px;
+		}
+
+} // END 400px
+
+@media all and(max-width: 320px) {
+	.modalContent img {
+		max-width: 270px;
+	}
+
+} // END 320px
+
