@@ -24,11 +24,10 @@ body {
 	margin: 0 auto;
 }
 
-.innerCrapper{
+.innerWrapper{
 	float: left;
 	width: 85%;	
 	padding: 50px;
-	// margin-left: 100px;
 }
 
 img {
@@ -52,7 +51,6 @@ a {
 	width: 15%;
 	float: left;
 	padding: 50px 0 50px 20px;
-	// position: fixed;
 }
 
 nav.main-nav {
@@ -70,11 +68,25 @@ nav.main-nav {
 			text-transform: uppercase;
 			letter-spacing: 1px;
 			margin-bottom: 5px;
+			&:last-child {
+				margin-bottom: 0;
+			}
 			a {
 				color: #222;
+				&:focus {
+					outline: none;
+				}
 			}
 		}
 	}
+}
+
+ul.gallery-links {
+	list-style-type: none;
+	margin: 0;
+	padding: 5px 0;
+	text-indent: 15px;
+	display: none;
 }
 
 ///////////////// M A I N ///////////////

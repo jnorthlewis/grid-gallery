@@ -25,16 +25,23 @@
 	<nav class="main-nav">
 		<h1>Grid Gallery</h1>
 		<ul class="nav-links">
-			<li><a href="#">//Home</a></li>
-			<li><a href="#">//About</a></li>
-			<li><a href="#">//Contact</a></li>
+			<li><a href="#">// Home</a></li>
+			<li><a href="#" class="gallery-link">// Galleries</a>
+				<ul class="gallery-links">
+					<li><a href="#">Music</a></li>
+					<li><a href="#">Travel</a></li>
+					<li><a href="#">Portrait</a></li>
+				</ul> <!-- END .galleries -->
+			</li>
+			<li><a href="#">// About</a></li>
+			<li><a href="#">// Contact</a></li>
 		</ul> <!-- END .nav-links -->
 	</nav> <!-- END .main-nav -->
 
 </section> <!-- END .sidebar -->
 	
 <section class="gallery">
-	<div class="innerCrapper">
+	<div class="innerWrapper">
 		
 		<div class="photoThumbnails js-masonry" id="container">
 			
@@ -63,7 +70,7 @@
 		<div class="overlay">
 
 			<div class="overlayBKG">
-				<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, ipsam.</p> -->
+				
 			</div> <!-- END .overlayBKG -->
 
 			<div class="modal clearfix">
@@ -89,11 +96,13 @@
 
 </div> <!-- END .wrapper -->
 
+<!-- SCRIPTS -->
 <script src="masonry.pkgd.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="js/scripts.js"></script>
 
 
+<!-- MASONRY FUNCTION -->
 <script>
 
 		$('.thumbnail-overlay').on('click', 'a', function(e) {

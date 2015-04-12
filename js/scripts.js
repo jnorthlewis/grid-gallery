@@ -91,6 +91,13 @@ $(function (){
 			
 		});
 
+	/////////// DROP DOWN NAVIGATION ///////////
+	///////////////////////////////////////////
+
+	$('a.gallery-link').on('click', function() {
+		$('ul.gallery-links').slideToggle(350);
+	});
+
 });
 
 
