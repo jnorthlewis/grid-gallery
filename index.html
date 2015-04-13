@@ -9,6 +9,9 @@
 
 	<!-- FAVICON -->
 
+	<!-- FONT AWESOME -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+
 	<!-- GOOGLE FONTS -->
 	<link href='http://fonts.googleapis.com/css?family=Hind:400,500,600,300,700' rel='stylesheet' type='text/css' />
 
@@ -31,17 +34,29 @@
 					<li><a href="#">Music</a></li>
 					<li><a href="#">Travel</a></li>
 					<li><a href="#">Portrait</a></li>
-				</ul> <!-- END .galleries -->
+				</ul> <!-- END .gallery-links -->
 			</li>
 			<li><a href="#">// About</a></li>
-			<li><a href="#">// Contact</a></li>
+			<li><a href="#" class="email-link">// Contact</a></li>
+				<ul class="contact-link">
+					<li><a href="#">name@email.com</a></li>
+				</ul>
 		</ul> <!-- END .nav-links -->
 	</nav> <!-- END .main-nav -->
+
+	<footer class="footer">
+		<ul class="social-icons">
+			<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+			<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+		</ul> <!-- END .social-icons -->
+		<p class="copyright">&copy; 2015</p>
+	</footer> <!-- END .footer -->
 
 </section> <!-- END .sidebar -->
 	
 <section class="gallery">
-	<div class="innerWrapper">
+	<div class="innerWrapper clearfix">
 		
 		<div class="photoThumbnails js-masonry" id="container">
 			
@@ -97,29 +112,28 @@
 </div> <!-- END .wrapper -->
 
 <!-- SCRIPTS -->
-<script src="masonry.pkgd.js"></script>
+<script src="js/masonry.pkgd.js"></script>
+<script src="js/imagesloaded.pkgd.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="js/scripts.js"></script>
 
-
-<!-- MASONRY FUNCTION -->
 <script>
 
-		$('.thumbnail-overlay').on('click', 'a', function(e) {
-			e.preventDefault;
-			var value = $(this).attr('data-full');
-			console.log(value);
-		});
+		// $('.thumbnail-overlay').on('click', 'a', function(e) {
+		// 	e.preventDefault;
+		// 	var value = $(this).attr('data-full');
+		// 	console.log(value);
+		// });
 
-		var $container = $('#container');
-
-		$container.imagesLoaded( function() {
-		  $container.masonry({
-		    columnWidth: function( containerWidth ) {
-		      return containerWidth / 3
-		    }
-		  });
+	$(document).ready(function() {
+		var container = document.querySelector('#container');
+		var msnry;
+		// initialize Masonry after all images have loaded
+		imagesLoaded( container, function() {
+		  msnry = new Masonry( container );
 		});
+	}); // END DOCUMENT READY
+
 </script>
 
 </body>

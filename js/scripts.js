@@ -94,10 +94,17 @@ $(function (){
 	/////////// DROP DOWN NAVIGATION ///////////
 	///////////////////////////////////////////
 
-	$('a.gallery-link').on('click', function() {
+	$('a.gallery-link').on('click', function(e) {
+		e.preventDefault();
 		$('ul.gallery-links').slideToggle(350);
 	});
 
-});
+	// CONTACT
+	$('a.email-link').on('click', function(e) {
+		e.preventDefault();
+		$('ul.contact-link').slideToggle(250);
+	});
+
+}); // END DOCUMENT READY
 
 

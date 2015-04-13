@@ -37,8 +37,9 @@ img {
 a {
 	text-decoration: none;
 	color: blue;
-} &:focus {
-	outline: none;
+	&:focus {
+		outline: none;
+	}
 }
 
 ////////////// H E A D E R //////////////
@@ -81,7 +82,7 @@ nav.main-nav {
 	}
 }
 
-ul.gallery-links {
+ul.gallery-links, ul.contact-link {
 	list-style-type: none;
 	margin: 0;
 	padding: 5px 0;
@@ -166,7 +167,7 @@ ul.gallery-links {
 		z-index: 1;
 		top: 0;
 		max-width: 700px;
-		max-height: 600px;
+		max-height: 550px;
 		display: block;
 		margin: 0 auto;
 	}
@@ -191,8 +192,8 @@ ul.gallery-links {
 	opacity: 0.5;
 }
 
-////////////// M A S O N R Y ////////////
-////////////////////////////////////////
+////////////// M A S O N R Y //////////////
+//////////////////////////////////////////
 
 #container {
 	float: left;
@@ -244,6 +245,33 @@ ul.gallery-links {
       -ms-transition-property: left, right, top;
        -o-transition-property: left, right, top;
           transition-property: left, right, top;
+}
+
+
+////////////// F O O T E R  //////////////
+/////////////////////////////////////////
+
+footer.footer{
+	margin-top: 15px;
+}
+
+p.copyright {
+	margin: 0;
+	color: #cccccc;
+	letter-spacing: 1px;
+}
+
+ul.social-icons {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	// text-align: center;
+	li {
+		display: inline;
+		&:nth-child(2) {
+			margin: 0 5px;
+		}
+	}
 }
 
 
