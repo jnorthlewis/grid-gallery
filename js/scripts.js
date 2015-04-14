@@ -105,6 +105,15 @@ $(function (){
 		$('ul.contact-link').slideToggle(250);
 	});
 
+	// KEEP GALLERY MENU OPEN ON MUSIC PAGE
+
+	if($('body').hasClass('body-music')) {
+		$('ul.gallery-links').css('display', 'block');
+	} else {
+
+	}
+
+
 }); // END DOCUMENT READY
 
 

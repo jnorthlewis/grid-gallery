@@ -5,6 +5,13 @@
 // FONTS 
 $font : 'Hind', sans-serif;
 
+// COLOUR
+$links : #222;
+$hover-color : #ccc;
+
+// TRANSITIONS
+$transition : all 0.2s ease;
+
 ///////////// D E F A U L T /////////////
 ////////////////////////////////////////
 
@@ -60,6 +67,9 @@ nav.main-nav {
 		text-transform: uppercase;
 		font-weight: 600;
 		color: #222;
+		a {
+			color: #222;
+		}
 	}
 	ul.nav-links {
 		margin: 0;
@@ -73,9 +83,10 @@ nav.main-nav {
 				margin-bottom: 0;
 			}
 			a {
-				color: #222;
-				&:focus {
-					outline: none;
+				color: $links;
+				transition: $transition;
+				&:hover {
+					color: $hover-color;
 				}
 			}
 		}
@@ -88,6 +99,14 @@ ul.gallery-links, ul.contact-link {
 	padding: 5px 0;
 	text-indent: 15px;
 	display: none;
+}
+
+.fa {
+	display: inline;
+}
+
+#home .home, #music .music {
+	color: $hover-color;
 }
 
 ///////////////// M A I N ///////////////
@@ -253,12 +272,19 @@ ul.gallery-links, ul.contact-link {
 
 footer.footer{
 	margin-top: 15px;
-}
-
-p.copyright {
-	margin: 0;
-	color: #cccccc;
+	padding: 20px 0;
+	text-align: center;
+	text-transform: uppercase;
 	letter-spacing: 1px;
+	color: #ccc;
+	a {
+		color: $hover-color;
+		transition: $transition;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }
 
 ul.social-icons {
