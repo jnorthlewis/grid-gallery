@@ -39,20 +39,6 @@ $(function (){
 	//3. make directional arrows work
 		$('a.arrowRight').on('click', function(e){
 			e.preventDefault();
-			// var newIndex = $(this).parent().parent().find('img').data('index');
-			// newIndex += 1;
-			// console.log(newIndex);
-			// var newSrc = $galleryImages.eq(newIndex).data('full');
-			// console.log(newSrc);
-			// var img = $('<img>').attr('src',newSrc).addClass('newImage').data('index',newIndex);
-			// $('.modalContent').append(img);
-			// $('.modalContent').addClass('transition');
-			// $('.modalContent').on('transitionend', '.newImage', function() {
-			// 	$('.modalContent .original').attr('src',newSrc);
-			// 	$('.modalContent .newImage').remove();
-			// 	$('.modalContent').removeClass('transition');
-			// });
-
 			var $selected = $('.selected')
 			if ($selected.is(':first-child')) {
 				$('.photoThumbnails a:last-child').click();	
@@ -65,13 +51,6 @@ $(function (){
 
 		$('a.arrowLeft').on('click', function (e){
 			e.preventDefault();
-			// 	var newIndex = $(this).parent().parent().find('img').data('index');
-			// newIndex -= 1;
-			// console.log(newIndex);
-			// var newSrc = $galleryImages.eq(newIndex).data('full');
-			// console.log(newSrc);
-			// $('.modalContent').append('<img class="newImage" src="'+newSrc+'">');
-			// $('.modalContent').addClass('transition');
 			var $selected = $('.selected');
 			if ($selected.is(':last-child')) {
 				$('.photoThumbnails a:first-child').click();
@@ -79,6 +58,19 @@ $(function (){
 				$selected.next().trigger('click');
 			}
 		});
+
+		// arrow keys
+
+		$(document).keydown(function(e) {
+	        var $current = $('.selected');
+	        console.log(e.which);
+	        if (e.keyCode ==37)
+	        	$current.prev().trigger('click');
+	        else if (e.keyCode ==39)
+	        	$current.next().trigger('click');
+	        else if (e.keyCode ==27)
+	        	$('.overlay').removeClass('open');
+       });
 
 	//4. transitions 
 
