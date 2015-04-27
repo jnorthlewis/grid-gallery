@@ -34,7 +34,7 @@ body {
 .innerWrapper{
 	float: left;
 	width: 85%;	
-	padding: 50px;
+	padding: 50px 20px;
 }
 
 img {
@@ -225,9 +225,9 @@ ul.gallery-links, ul.contact-link {
 .item {
   // width: 31.2%;
   // 3 column
-  width: 30%;
+  width: 31%;
   // 4 column
-  // width: 100%;
+  // width: 22%;
   float: left;
   margin: 1%;
 
@@ -271,6 +271,7 @@ ul.gallery-links, ul.contact-link {
 /////////////////////////////////////////
 
 footer.footer{
+	clear: both;
 	margin-top: 15px;
 	padding: 20px 0;
 	text-align: center;

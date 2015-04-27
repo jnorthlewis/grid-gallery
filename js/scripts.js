@@ -21,7 +21,6 @@ $(function (){
 
 		$('.selected').removeClass('selected');
 		$(this).addClass('selected');
-		console.log('selected!');
 
 	//2. have modal box get full-size image
 		// the second src (without apostrophes) is the variable
@@ -31,8 +30,6 @@ $(function (){
 		if ( $('.modal').$height > $minHeight) {
 			$(this).css("width", "40%");
 		}
-
-		console.log('imagessssss');
 	});
 
 
@@ -44,7 +41,6 @@ $(function (){
 				$('.photoThumbnails a:last-child').click();	
 			} else {
 				$selected.prev().trigger('click');
-				console.log('previous')
 			}
 		
 		});
@@ -63,7 +59,6 @@ $(function (){
 
 		$(document).keydown(function(e) {
 	        var $current = $('.selected');
-	        console.log(e.which);
 	        if (e.keyCode ==37)
 	        	$current.prev().trigger('click');
 	        else if (e.keyCode ==39)
@@ -79,7 +74,6 @@ $(function (){
 
 		$('.overlayBKG').on('click', function(){
 				$('.overlay').removeClass('open');
-				console.log('removed!');
 			
 		});
 
@@ -89,12 +83,14 @@ $(function (){
 	$('a.gallery-link').on('click', function(e) {
 		e.preventDefault();
 		$('ul.gallery-links').slideToggle(350);
+		$('ul.contact-link').css('display', 'none');
 	});
 
 	// CONTACT
 	$('a.email-link').on('click', function(e) {
 		e.preventDefault();
-		$('ul.contact-link').slideToggle(250);
+		$('ul.contact-link').slideToggle(350);
+		$('ul.gallery-links').css('display', 'none');
 	});
 
 	// KEEP GALLERY MENU OPEN ON MUSIC PAGE
