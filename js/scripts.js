@@ -28,8 +28,11 @@ $(function (){
 		var $minHeight = 800;
 		var $height = $('.modal').height();
 		if ( $('.modal').$height > $minHeight) {
-			$(this).css("width", "40%");
+			//$(this).css("width", "40%");
 		}
+
+		// CLOSE MENUS WHEN MODAL IS OPEN
+		$('ul.gallery-links, ul.contact-link').css('display', 'none');
 	});
 
 
@@ -100,7 +103,6 @@ $(function (){
 	} else {
 
 	}
-
 
 }); // END DOCUMENT READY
 
