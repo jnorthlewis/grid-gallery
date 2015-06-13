@@ -16,6 +16,9 @@
 	<!-- GOOGLE FONTS -->
 	<link href='http://fonts.googleapis.com/css?family=Hind:400,500,600,300,700' rel='stylesheet' type='text/css' />
 
+	<!-- FANCYBOX -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" type="text/css" media="screen" />
+
 	<!-- SITE STYLES -->
 	<link rel="stylesheet" href="css/styles.css" />
 
@@ -29,86 +32,69 @@
 		<nav class="main-nav">
 			<h1><a href="index.html">Grid Gallery</a></h1>
 			<ul class="nav-links">
-				<li><a href="index.html" class="home">// Home</a></li>
-				<li><a href="#" class="gallery-link">// Galleries</a>
+				<li><a href="index.html" class="home">Home</a></li>
+				<li><a href="#" class="gallery-link">Galleries</a>
 					<ul class="gallery-links secondNav">
 						<li><a href="#">Music</a></li>
 						<li><a href="#">Travel</a></li>
 						<li><a href="#">Portrait</a></li>
 					</ul> <!-- END .gallery-links -->
 				</li>
-				<li><a href="#">// About</a></li>
-				<li><a href="#" class="email-link">// Contact</a>
-					<ul class="contact-link secondNav">
-						<li><a href="#">name@email.com</a></li>
-						<li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
-						<li><a href="#"><i class="fa fa-instagram"></i> Instagram</a></li>
-					</ul> <!-- END .contact-link -->
-				</li>
+				<li><a href="#" class="contact">Contact</a></li>
 			</ul> <!-- END .nav-links -->
 		</nav> <!-- END .main-nav -->
 
 	</section> <!-- END .sidebar -->
+
+	<div class="overlay">
+		<div class="wrap">
+			<h2>Jeremy North-Lewis</h2>
+			<p>Web-Developer & Photographer based in Toronto, ON.</p>
+			<ul class="contact-links">
+				<li>
+					<a href="#"><i class="fa fa-camera-retro fa-2x"></i></a>
+					<a href="#"><i class="fa fa-twitter fa-2x"></i></a>
+					<a href="#"><i class="fa fa-envelope fa-2x"></i></a>
+				</li><!--END .contact-links-->
+			</ul>
+		</div>
+	</div>
 		
 	<section class="gallery">
 		<div class="innerWrapper clearfix">
 			
 			<div class="photoThumbnails js-masonry" id="container">
 				
-				<a href="" class="item" data-full="i/gridgallery-15.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-15-th.jpg" alt=""></a>
-			
-				<a href="" class="item"  data-full="i/gridgallery-04.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-04-th.jpg" alt=""></a>
-			
-				<a href="" class="item" data-full="i/gridgallery-03.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-03-th.jpg" alt=""></a>
-
-				<a href="" class="item" data-full="i/gridgallery-02.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-02-th.jpg" alt=""></a>
-			
-				<a href="" class="item" data-full="i/gridgallery-05.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-05-th.jpg" alt=""></a>
-
-				<a href="" class="item" data-full="i/gridgallery-06.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-06-th.jpg" alt=""></a>
+				<a class="fancybox item" href="i/gridgallery-15.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-15-th.jpg" alt=""></a>
 				
-				<a href="" class="item" data-full="i/gridgallery-07.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-07-th.jpg" alt=""></a>
+				<a class="fancybox item" href="i/gridgallery-04.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-04-th.jpg" alt=""></a>
+			
+				<a class="fancybox item" href="i/gridgallery-03.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-03-th.jpg" alt=""></a>
 
-				<a href=""  class="item" data-full="i/gridgallery-08.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-08-th.jpg" alt=""></a>
+				<a class="fancybox item" href="i/gridgallery-02.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-02-th.jpg" alt=""></a>
+			
+				<a class="fancybox item" href="i/gridgallery-05.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-05-th.jpg" alt=""></a>
 
-				<a href="" class="item" data-full="i/gridgallery-09.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-09-th.jpg" alt=""></a>
+				<a class="fancybox item" href="i/gridgallery-06.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-06-th.jpg" alt=""></a>
+				
+				<a class="fancybox item" href="i/gridgallery-07.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-07-th.jpg" alt=""></a>
 
-				<a href="" class="item" data-full="i/gridgallery-10.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-10-th.jpg" alt=""></a>
+				<a class="fancybox item" href="i/gridgallery-08.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-08-th.jpg" alt=""></a>
 
-				<a href="" class="item" data-full="i/gridgallery-11.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-11-th.jpg" alt=""></a>
+				<a class="fancybox item" href="i/gridgallery-09.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-09-th.jpg" alt=""></a>
 
-				<a href="" class="item" data-full="i/gridgallery-12.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-12-th.jpg" alt=""></a>
+				<a class="fancybox item" href="i/gridgallery-10.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-10-th.jpg" alt=""></a>
 
-				<a href="" class="item" data-full="i/gridgallery-13.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-13-th.jpg" alt=""></a>
+				<a class="fancybox item" href="i/gridgallery-11.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-11-th.jpg" alt=""></a>
 
-				<a href="" class="item" data-full="i/gridgallery-14.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-14-th.jpg" alt=""></a>
+				<a class="fancybox item" href="i/gridgallery-12.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-12-th.jpg" alt=""></a>
+
+				<a class="fancybox item" href="i/gridgallery-13.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-13-th.jpg" alt=""></a>
+
+				<a class="fancybox item" href="i/gridgallery-14.jpg" data-desc="Image Description Here" rel="gallery01"><img src="i/gridgallery-14-th.jpg" alt=""></a>
 
 		
 			</div> <!-- END .photoThumbnails -->
-
-			<div class="overlay">
-
-				<div class="overlayBKG">
-					
-				</div> <!-- END .overlayBKG -->
-
-				<div class="modal clearfix">
-
-					<div class="arrowRightDiv arrowDiv">
-						<a href="" class="arrowRight"></a>
-					</div> <!-- END .arrowRightDiv -->
-
-					<div class="arrowLeftDiv arrowDiv">
-						<a href="" class="arrowLeft"></a>
-					</div> <!-- END .arrowLeftDiv -->
-					
-					<div class="modalContent clearfix">
-						<img src="" alt="">
-					</div> <!-- END .modalContent -->
-				
-				</div> <!-- END .modal -->
-			
-			</div> <!-- END .overlay -->
 		
 		</div> <!-- END .innerWrapper -->
 	</section> <!-- END .gallery -->
@@ -123,26 +109,23 @@
 	<script src="js/masonry.pkgd.js"></script>
 	<script src="js/imagesloaded.pkgd.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 	<script src="js/scripts.js"></script>
 
 	<script>
 
-			// $('.thumbnail-overlay').on('click', 'a', function(e) {
-			// 	e.preventDefault;
-			// 	var value = $(this).attr('data-full');
-			// 	console.log(value);
-			// });
-
 		$(document).ready(function() {
+
 			var container = document.querySelector('#container');
 			var msnry;
 			// initialize Masonry after all images have loaded
 			imagesLoaded( container, function() {
 			  msnry = new Masonry( container );
 			});
+
+
 		}); // END DOCUMENT READY
 
 	</script>
-
 </body>
 </html>
