@@ -1,4 +1,3 @@
-
 // NORMALIZE
 @import 'normalize';
 
@@ -7,10 +6,10 @@ $font : 'Hind', sans-serif;
 
 // COLOUR
 $links : #222;
-$hover-color : #8e8e8e;
+$hover : #8e8e8e;
 
 // TRANSITIONS
-$transition : all 0.2s ease;
+$transition : all 0.3s ease-in-out;
 
 ///////////// D E F A U L T /////////////
 ////////////////////////////////////////
@@ -87,7 +86,7 @@ nav.main-nav {
 				font-size: 1.2rem;
 				transition: $transition;
 				&:hover {
-					color: $hover-color;
+					color: $hover;
 				}
 			}
 		}
@@ -107,7 +106,7 @@ ul.gallery-links {
 }
 
 #home .home, #music .music {
-	color: $hover-color;
+	color: $hover;
 }
 
 ///////////// O V E R L A Y /////////////
@@ -148,9 +147,27 @@ ul.gallery-links {
 				margin: 0 20px;
 			}
 			&:hover {
-				color: $hover-color;
+				color: $hover;
 			}
 		}	
+	}
+	div.button-container {
+		margin-top: 60px;
+		a.close-button {
+			font-weight: 600;
+			font-size: 1.2rem;
+			padding: 4px 9px 3px 9px;
+			border: 1px solid $hover;
+			// border-radius: 100%;
+			color: $hover;
+			transition: $transition;
+			&:hover {
+				color: $links;
+				border: 1px solid $links;
+				// border: 2px solid $links;
+			}
+			
+		}
 	}
 }
 
@@ -268,9 +285,9 @@ footer.footer{
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	color: $hover-color;
+	color: $hover;
 	a {
-		color: $hover-color;
+		color: $hover;
 		transition: $transition;
 		text-decoration: underline;
 		&:hover {

@@ -39,18 +39,12 @@ $(function (){
 
 	// CONTACT
 
-	// $('a.email-link').on('click', function(e) {
-	// 	e.preventDefault();
-	// 	$('ul.contact-link').slideToggle(350);
-	// 	$('ul.gallery-links').css('display', 'none');
-	// });
-
-	$("a.contact").on('click', function(){
+	$("a.contact-button").on('click', function(){
 		$(".overlay").fadeToggle(200);
 	});
 
-	$('.overlay').on('click', function(){
-		$(this).fadeToggle(200);   
+	$('a.close-button').on('click', function(){
+		$(".overlay").fadeToggle(200);   
 	});
 
 	// KEEP GALLERY MENU OPEN ON MUSIC PAGE
