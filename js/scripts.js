@@ -1,5 +1,33 @@
 $(function (){
 
+	// FADE IN LOGO
+	var pathFade = function() {
+		
+		$($('svg.logo path')[0]).velocity({ opacity: 1}, {delay: 100});
+		$($('svg.logo path')[1]).velocity({ opacity: 1}, {delay: 150});
+		$($('svg.logo path')[2]).velocity({ opacity: 1}, {delay: 200});
+		$($('svg.logo path')[3]).velocity({ opacity: 1}, {delay: 300});
+		$($('svg.logo path')[4]).velocity({ opacity: 1}, {delay: 350});
+		$($('svg.logo path')[5]).velocity({ opacity: 1}, {delay: 400});
+		$($('svg.logo path')[6]).velocity({ opacity: 1}, {delay: 600});
+		$($('svg.logo path')[7]).velocity({ opacity: 1}, {delay: 650});
+		$($('svg.logo path')[8]).velocity({ opacity: 1}, {delay: 700});
+		$($('svg.logo path')[9]).velocity({ opacity: 1}, {delay: 750});
+		$($('svg.logo path')[10]).velocity({ opacity: 1}, {delay: 800});
+		$($('svg.logo path')[11]).velocity({ opacity: 1}, {delay: 850});
+		$($('svg.logo path')[12]).velocity({ opacity: 1}, {delay: 900});
+		$($('svg.logo path')[13]).velocity({ opacity: 1}, {delay: 950});
+		$($('svg.logo path')[14]).velocity({ opacity: 1}, {delay: 1000});
+		$($('svg.logo path')[15]).velocity({ opacity: 1}, {delay: 1050});
+		$($('svg.logo path')[16]).velocity({ opacity: 1}, {delay: 1100});
+		
+		$('ul.nav-links').velocity({opacity: 1}, {delay: 1150});
+	}
+
+	pathFade();
+
+	// FADE IN GALLERY
+	$('.gallery').velocity({ opacity: 1}, {delay: 2000});
 	
 	// FANCYBOX
 
@@ -40,11 +68,11 @@ $(function (){
 	// CONTACT
 
 	$("a.contact-button").on('click', function(){
-		$(".overlay").fadeToggle(200);
+		$(".overlay").fadeToggle(100);
 	});
 
 	$('a.close-button').on('click', function(){
-		$(".overlay").fadeToggle(200);   
+		$(".overlay").fadeToggle(100);   
 	});
 
 	// KEEP GALLERY MENU OPEN ON MUSIC PAGE

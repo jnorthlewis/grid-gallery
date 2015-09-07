@@ -1,9 +1,3 @@
-@media all and (max-width: 1000px) {
-	.modalContent img {
-		max-width: 640px;
-		max-height: 530px;
-	}
-} // END 1000px
 
 @media all and (max-width: 1200px) {
 	.modalContent img {
@@ -17,7 +11,8 @@
 
 	.sidebar{
 		width: 100%;
-		padding: 50px 0 0 30px;
+		padding: 50px 0 0 0;
+		// margin-left: 20px;
 	}
 
 	ul.nav-links li:not(.gallery-links) {
@@ -49,65 +44,27 @@
 		}
 	}
 
-} // END 840px
-
-@media all and (max-width: 750px) {
-	.modalContent img {
-		max-width: 540px;
-	}
-} // END 750px
-
-@media all and (max-width: 666px) {
-	.modalContent img {
-		max-width: 430px;
-	}
-
-	#container{
-		//height: auto !important;
-	}
-} // END 666px
-
-@media all and (max-width: 550px) {
-	.modalContent img {
-		max-width: 385px;
-	}
-} // END 550px
-
-@media all and (max-width: 460px) {
-	.modal {
-		padding: 15px;
-	}
-
-	.overlayBKG {
-		opacity: 0.3;
-	}
-}
+} // END 1200px
 
 @media all and (max-width: 400px) {
-	    .item {
-	  		width: 100%;
-		}
+    .item {
+  		width: 100%;
+	}
 
-		.innerWrapper.item{
-			margin-bottom: 20px;
-		}
+	.innerWrapper.item{
+		margin-bottom: 20px;
+	}
 
-		.wrap {
-			p {
-				padding: 0 15px;
-			}
+	.wrap {
+		p {
+			padding: 0 15px;
 		}
-
+	}
 } // END 400px
 
 @media all and(max-width: 320px) {
-	.modalContent img {
-		max-width: 270px;
-	}
-
 	ul.contact-link.secondNav {
 		left: -20px;
 	}
-
 } // END 320px
 
