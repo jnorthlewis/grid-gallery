@@ -1,2 +1,6 @@
 node_modules/
 _source/
+gulpfile.js
+package.json
+img-min/
+prepros.cfg
