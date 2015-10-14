@@ -169,9 +169,8 @@ ul.gallery-links {
 		}	
 	}
 	.button-container {
-		position: absolute;
-		right: 35px;
-		top: 45px;
+		float: right;
+		margin-top: -175px;
 		.close-button {
 			font-weight: 600;
 			font-size: 1.2rem;
@@ -240,6 +239,8 @@ a.fancybox-nav.fancybox-prev {
 	}
 }
 
+// scroll to top button 
+
 .cd-top {
 	display: inline-block;
 	height: 30px;
@@ -282,6 +283,7 @@ a.fancybox-nav.fancybox-prev {
 		background-color: rgba($hover, 1);
 		opacity: 1;
 	}
+
 }
 
 
@@ -309,6 +311,28 @@ a.fancybox-nav.fancybox-prev {
 @media only screen and (max-width: 767px) {
     .item {
   		width: 31%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+    .fancybox-skin {
+  		padding: 15px!important;
+	}
+
+	.fancybox-inner {
+		width: auto!important;
+		height: auto!important;
+	}
+
+	.item {
+		width: 47.5%;
+	}
+}
+
+
+@media only screen and (max-width: 420px) {
+    .item {
+  		width: 98.5%;
 	}
 }
 

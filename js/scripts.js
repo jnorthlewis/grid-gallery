@@ -81,7 +81,7 @@ $(function (){
 	if($('body').hasClass('body-music')) {
 		$('ul.gallery-links').css('display', 'block');
 	}
-
+	
 	// SCROLL TO TOP
 	var offset = 100,
 		//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
@@ -99,7 +99,7 @@ $(function (){
 		}
 	});
 
-	//smooth scroll to top
+	// smooth scroll to top
 	$back_to_top.on('click', function(event){
 		event.preventDefault();
 		$('body,html').animate({
@@ -107,6 +107,7 @@ $(function (){
 		 	}, scroll_top_duration
 		);
 	});
+	
 
 }); // END DOCUMENT READY
 
